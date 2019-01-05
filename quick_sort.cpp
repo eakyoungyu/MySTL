@@ -1,9 +1,10 @@
 template <typename T>
-void swap(T &a, T &b) {
+void my_swap(T &a, T &b) {
 	T temp = a;
 	a = b;
 	b = temp;
 }
+
 template <typename T>
 void quick_sort(T arr[], int left, int right) {
 	if (left > right) {
@@ -21,11 +22,11 @@ void quick_sort(T arr[], int left, int right) {
 		}
 
 		if (i < j) {
-			swap(arr[i], arr[j]);
+			my_swap(arr[i], arr[j]);
 		}
 	}
 
-	swap(arr[pivot], arr[j]);
+	my_swap(arr[pivot], arr[j]);
 	quick_sort(arr, left, j - 1);
 	quick_sort(arr, j + 1, right);
 }
