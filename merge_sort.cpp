@@ -1,4 +1,5 @@
-void merge_sort(int arr[], int size) {
+template <typename T>
+void merge_sort(T arr[], int size) {
 	if (size == 1) {
 		return;
 	}
@@ -10,7 +11,7 @@ void merge_sort(int arr[], int size) {
 
 	//merge
 	int i = 0, j = mid;
-	int *buf = new int[size];
+	T *buf = new T[size];
 	int k = 0;
 	while (i < mid&&j < size) {
 		buf[k++] = arr[i] < arr[j] ? arr[i++] : arr[j++];

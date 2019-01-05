@@ -1,9 +1,11 @@
-int swap(int &a, int &b) {
-	int temp = a;
+template <typename T>
+void swap(T &a, T &b) {
+	T temp = a;
 	a = b;
 	b = temp;
 }
-void quick_sort(int arr[], int left, int right) {
+template <typename T>
+void quick_sort(T arr[], int left, int right) {
 	if (left > right) {
 		return;
 	}
