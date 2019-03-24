@@ -36,6 +36,12 @@ struct HashMap {
 			bucket_tail[i]->prev = bucket_head[i];
 		}
 	}
+	void clear() {
+		for (int i = 0; i < HASH_SIZE; i++) {
+			bucket_head[i]->nxt = bucket_tail[i];
+			bucket_tail[i]->prev = bucket_head[i];
+		}
+	}
 	
 	void insert(char str[20]) {
 		Node *nnode = new Node();
