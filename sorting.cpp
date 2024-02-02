@@ -64,7 +64,7 @@ void merge_sort(int nums[], int size) {
 }
 void quick_sort(int nums[], int s, int e) {
 	//degenerate case
-	if (s > e)	return; //s>=eµµ µÈ´Ù
+	if (s > e)	return; //s>=eÂµÂµ ÂµÃˆÂ´Ã™
 
 	//divide --> pivot
 	int pivot = s;
@@ -72,8 +72,8 @@ void quick_sort(int nums[], int s, int e) {
 	i = s + 1;
 	j = e;
 	while (i <= j) {
-		while (nums[i] <= nums[pivot])	i++;
-		while (nums[j] > nums[pivot])	j--;
+		while (i <= e && nums[i] <= nums[pivot]) i++;
+		while (j >= s && nums[j] > nums[pivot]) j--;
 		if (i < j) {
 			my_swap(nums[i], nums[j]);
 		}
